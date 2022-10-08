@@ -6,10 +6,30 @@
  *
  * ****************************************/
 
+/****************************************
+ * Incluir Librerias
+ ****************************************/
+#include "UbidotsEsp32Mqtt.h"
+
+/****************************************
+ * Definir Constantes
+ ****************************************/
+const char *UBIDOTS_TOKEN = "BBFF-kPytPYmNsglM7c4m8JfdExcMQHvj2T";
+const char *WIFI_SSID = "Familia_Amortegui_REP";
+const char *WIFI_PASS = "MAS970726";
+const char *DEVICE_LABEL = "esp32_main";
+const char *VARIABLE_LABEL = "sensor";
+
+int boton = 2;
+const int PUBLISH_FREQUENCY = 1000;
+unsigned long timer;
+
 int LecturaAnaloga = 34;
 float temperatura;
 float valorMultiplicador = 0.25;
 float ADC;
+
+Ubidots ubidots(UBIDOTS_TOKEN);
 
 void setup() {
   Serial.begin(115200);
