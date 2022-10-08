@@ -6,14 +6,26 @@
  *
  * ****************************************/
 
-void setup() {
+int LecturaAnaloga = 34;
+float temperatura;
+float valorMultiplicador = 0.25;
+float ADC;
 
+void setup() {
+  Serial.begin(115200);
 }
 
 //Colocar funcion de envio de datos
 
 //Colocar funcion de sensado de temperatura
 
-void loop() {
+float sensor(){
+  ADC = analogRead(LecturaAnaloga);
+  temperatura = ADC*valorMultiplicador;
+  Serial.println(temperatura);
+  return temperatura;
+}
 
+void loop() {
+  sensor();
 }
