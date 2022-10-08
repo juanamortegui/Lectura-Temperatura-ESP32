@@ -1,0 +1,19 @@
+/******************************************
+ *
+ * Lectura temperatura ESP32 y envio de datos a ubidots
+ * Juan Amortegui-Diego Cardenas
+ * Diseño de Dispositivos IoT
+ *
+ * ****************************************/
+
+void setup() {
+
+}
+
+//Colocar funcion de envio de datos
+
+//Colocar funcion de sensado de temperatura
+
+void loop() {
+
+}
