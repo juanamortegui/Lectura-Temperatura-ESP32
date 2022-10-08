@@ -84,4 +84,8 @@ float sensor(){
 
 void loop() {
   sensor();
+  if(digitalRead(boton)){
+    Serial.println("Boton pulsado");
+    envioDatos();
+  }
 }
