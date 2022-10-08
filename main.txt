@@ -8,7 +8,7 @@
 
 int LecturaAnaloga = 34;
 float temperatura;
-float valorMultiplicador = 0.193877;
+float valorMultiplicador = 0.25;
 float ADC;
 
 void setup() {
@@ -20,8 +20,8 @@ void setup() {
 //Colocar funcion de sensado de temperatura
 
 float sensor(){
-  ADC = analogRead(34);
-  temperatura = ADC*0.3;
+  ADC = analogRead(LecturaAnaloga);
+  temperatura = ADC*valorMultiplicador;
   Serial.println(temperatura);
   return temperatura;
 }
