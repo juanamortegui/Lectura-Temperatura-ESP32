@@ -6,6 +6,11 @@
  *
  * ****************************************/
 
+int LecturaAnaloga = 34;
+float temperatura;
+float valorMultiplicador = 0.193877;
+float ADC;
+
 void setup() {
 
 }
